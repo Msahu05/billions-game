@@ -3,6 +3,9 @@ import random
 
 app = Flask(__name__)
 
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 31536000  # cache 1 year
+
+
 def get_cards(mode: str):
     if mode == "easy":
         n = 5

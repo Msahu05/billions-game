@@ -12,6 +12,15 @@ let timeLeft = 0;
 // start a new game by fetching the shuffled deck from the backend
 // start a new game by fetching the shuffled deck from the backend
 
+// Preload all card images so they don't lag when flipped
+function preloadImages(deck) {
+  deck.forEach(file => {
+    const img = new Image();
+    img.src = `/static/images/${file}`;
+  });
+}
+
+
 // Force refresh (F5) to go to home page
 if (performance.navigation.type === 1) {
   window.location.href = "/";
@@ -34,6 +43,7 @@ async function startNewGame() {
     const data = await res.json();
 
     deck = data.deck || [];
+    preloadImages(deck);
     matchedPairs = 0;
     flippedCards = [];
     lockBoard = false;
