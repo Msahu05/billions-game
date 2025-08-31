@@ -31,26 +31,28 @@
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 
   <!-- Celebration Screen -->
-  <div id="celebration-overlay" class="celebration-overlay">
-    <div class="celebration-content">
-      <video id="celebration-video" autoplay muted playsinline>
-        <source src="/static/videos/victory.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <br>
-      <button id="celebration-btn">New Game</button>
-    </div>
+  <!-- Celebration Screen -->
+<div id="celebration-overlay" class="celebration-overlay">
+  <div class="celebration-content">
+    <h1 id="celebration-text">Congrats you made Javi happy by winning the game 🎉</h1>
+    <video id="celebration-video" autoplay muted playsinline>
+      <source src="/static/videos/victory.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <br>
+    <button id="celebration-btn">New Game</button>
   </div>
+</div>
 
-  <!-- Lose Screen -->
-  <div id="lose-overlay" class="celebration-overlay">
-    <div class="celebration-content">
-      <video id="lose-video" playsinline>
-        <source src="/static/videos/lose.mp4" type="video/mp4">
-      </video>
-      <br>
-      <button id="lose-btn">Try Again</button>
-    </div>
+<!-- Lose Screen -->
+<div id="lose-overlay" class="celebration-overlay">
+  <div class="celebration-content">
+    <h1 id="lose-text">Oops! You made Javi cry 😢<br> Try again to make Javi happy!!</h1>
+    <video id="lose-video" playsinline>
+      <source src="/static/videos/lose.mp4" type="video/mp4">
+    </video>
+    <br>
+    <button id="lose-btn">Try Again</button>
   </div>
-</body>
-</html>
+</div>
+

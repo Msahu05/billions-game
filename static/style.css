@@ -123,11 +123,12 @@ body {
 }
 
 .celebration-content h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: cyan;
-  text-shadow: 0 0 20px magenta, 0 0 40px yellow;
-  margin-bottom: 30px;
+  text-shadow: 0 0 15px magenta, 0 0 30px yellow;
+  margin-bottom: 20px;
 }
+
 
 .celebration-content button {
   padding: 12px 28px;
