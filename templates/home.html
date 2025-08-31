@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Billions Game - Home</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=2">
+
 </head>
 <body class="home-body">
 
@@ -21,7 +22,7 @@
     </form>
   </div>
 
-<footer class="credits">
+<div class="credits">
   <div class="credit-item">
     <img src="/static/images/x-logo.png" alt="X Logo" class="credit-logo">
     <span>@dhruv9518 (Eren)</span>
@@ -30,7 +31,7 @@
     <img src="/static/images/dc-logo.png" alt="Discord Logo" class="credit-logo">
     <span>@eren9518 (Eren)</span>
   </div>
-</footer>
+</div>
 
 </body>
 </html>

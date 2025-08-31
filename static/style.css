@@ -171,6 +171,7 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
+  position: relative;
 }
 
 .home-container {
@@ -204,31 +205,30 @@ body {
 
 .credits {
   position: fixed;
-  bottom: 20px;       /* give it a bit more breathing room */
-  left: 15px;
+  bottom: 20px;
+  left: 20px;
   display: flex;
-  gap: 28px;          /* more spacing between items */
-  align-items: center;
-  background: rgba(0,0,0,0.7);
-  padding: 16px 25px; /* bigger padding for a larger box */
-  border-radius: 14px;
-  box-shadow: 0 0 15px rgba(0,255,255,0.5);
-  font-size: 2rem;    /* bump text size */
-  transform: scale(1.5); /* makes the whole box slightly bigger */
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 12px 16px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  z-index: 9999;
 }
 
 .credit-item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   color: white;
+  font-size: 0.95rem;
 }
 
 .credit-logo {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
 }
-
 
 
 
