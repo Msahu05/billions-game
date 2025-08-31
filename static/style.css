@@ -202,6 +202,35 @@ body {
   transform: scale(1.05);
 }
 
+.credits {
+  position: fixed;
+  bottom: 20px;       /* give it a bit more breathing room */
+  left: 15px;
+  display: flex;
+  gap: 28px;          /* more spacing between items */
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+  padding: 16px 25px; /* bigger padding for a larger box */
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0,255,255,0.5);
+  font-size: 2rem;    /* bump text size */
+  transform: scale(1.5); /* makes the whole box slightly bigger */
+}
+
+.credit-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: white;
+}
+
+.credit-logo {
+  width: 30px;
+  height: 30px;
+}
+
+
+
 
 /* Animation for popup */
 @keyframes popIn {
