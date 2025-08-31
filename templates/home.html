@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billions Game - Home</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="home-body">
+
+  <div class="home-container">
+    <h1>Billions Game</h1>
+    <form action="/game" method="get">
+      <label for="mode">Choose Difficulty :  </label>
+      <select name="mode" id="mode" class="mode-select">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium </option>
+        <option value="hard">Hard </option>
+        <option value="expert">Expert </option>
+      </select> <br>
+      <button type="submit" class="start-btn">Start Game</button>
+    </form>
+  </div>
+
+</body>
+</html>

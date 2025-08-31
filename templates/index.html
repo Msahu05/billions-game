@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Billions Game</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1 class="main-title">Billions Game</h1>
+
+  <div style="margin: 20px;">
+    <label for="mode-in-game">Difficulty:</label>
+    <select id="mode-in-game">
+      <option value="easy">Easy (5 pairs)</option>
+      <option value="medium">Medium (10 pairs)</option>
+      <option value="hard">Hard (15 pairs)</option>
+      <option value="expert">Expert (20 pairs)</option>
+    </select>
+  </div>
+
+  <div id="timer" class="timer">Time: 00</div>
+
+  <!-- Pass initial difficulty from Flask -->
+  <input type="hidden" id="initial-mode" value="{{ mode }}">
+
+  <div id="game-container" class="game-container"></div>
+
+  <!-- New Game button at the bottom -->
+  <button id="back-home" class="new-game">🏠 New Game</button>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <!-- Celebration Screen -->
+  <div id="celebration-overlay" class="celebration-overlay">
+    <div class="celebration-content">
+      <video id="celebration-video" autoplay muted playsinline>
+        <source src="/static/videos/victory.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <br>
+      <button id="celebration-btn">New Game</button>
+    </div>
+  </div>
+
+  <!-- Lose Screen -->
+  <div id="lose-overlay" class="celebration-overlay">
+    <div class="celebration-content">
+      <video id="lose-video" playsinline>
+        <source src="/static/videos/lose.mp4" type="video/mp4">
+      </video>
+      <br>
+      <button id="lose-btn">Try Again</button>
+    </div>
+  </div>
+</body>
+</html>
